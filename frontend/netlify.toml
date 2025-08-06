@@ -1,9 +1,11 @@
-[build]
-  publish = "build"
-  base = "frontend"
+# This file configures the build for Netlify and overrides the UI settings.
 
+[build]
+  # This tells Netlify that the final website is in the "dist" folder.
+  publish = "dist"
+
+# This fixes the "Page Not Found" error for React Router.
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
