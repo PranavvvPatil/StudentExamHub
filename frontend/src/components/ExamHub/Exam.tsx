@@ -23,7 +23,7 @@ export default function Exam() {
   useEffect(() => {
     async function fetchQ() {
       try {
-        const res = await axios.get("http://localhost:5001/api/exam/start", {
+        const res = await axios.get("https://student-exam-api.onrender.com/api/exam/start", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         });
         setQuestions(res.data.questions);
@@ -45,7 +45,7 @@ export default function Exam() {
           selected
         }))
       };
-      const res = await axios.post("http://localhost:5001/api/exam/submit", payload, {
+      const res = await axios.get("https://student-exam-api.onrender.com/api/exam/start", payload, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
       });
       localStorage.setItem("score", String(res.data.score));
