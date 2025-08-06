@@ -13,7 +13,7 @@ export default function Register() {
 
     
     try {
-      await axios.post("https://student-exam-api.onrender.com/api/auth/login", data);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, data);
       
       // On success, navigate to the login page
       navigate("/login");
