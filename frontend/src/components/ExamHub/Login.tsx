@@ -10,7 +10,7 @@ export default function Login() {
 
     try {
       
-      const res = await axios.post("https://student-exam-api.onrender.com/api/auth/login", data);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, data);
       localStorage.setItem("token", res.data.token);
       window.location.href = "/exam";
     } catch (err) {
