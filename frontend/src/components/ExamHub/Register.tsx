@@ -13,7 +13,7 @@ export default function Register() {
 
     
     try {
-      await axios.post("http://localhost:5001/api/auth/register", data);
+      await axios.post("https://student-exam-api.onrender.com/api/auth/login", data);
       
       // On success, navigate to the login page
       navigate("/login");
